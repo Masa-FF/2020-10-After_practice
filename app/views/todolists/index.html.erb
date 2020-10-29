@@ -1,0 +1,10 @@
+<h1>投稿一覧</h1>
+<% @lists.each do |list| %>
+  <p>タイトル</p>
+  <span>
+    <%= link_to list.title, todolist_path(list.id) %>
+  </span>
+<% end %>
+
+<p><%= link_to "☆記事作成", todolists_new_path %></p>
+<p><%= link_to "トップページへ戻る", root_path %></p>
